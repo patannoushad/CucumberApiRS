@@ -1,0 +1,36 @@
+{
+  "persons": [
+    {
+      "first_name": "John",
+      "last_name": "Sharma",
+      "age": 27,
+      "id": 2,
+      "address": "New York",
+      "phonenumbers": "123456"
+    },
+    {
+      "first_name": "sumit",
+      "last_name": "srivastava",
+      "age": 34,
+      "id": 3,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    },
+    {
+      "first_name": "Rahul",
+      "last_name": "bhardaj",
+      "age": 35,
+      "id": 1,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    },
+    {
+      "first_name": "rohan",
+      "last_name": "srivastava",
+      "age": 35,
+      "id": 4,
+      "address": "201 house no",
+      "phonenumbers": "9978678"
+    }
+  ]
+}

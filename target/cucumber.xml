@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="4.181" tests="4" skipped="0" failures="4" errors="0" timestamp="2025-04-19T13:21:26.974791100Z">
+<testcase classname="Validating Place API's" name="Verify if Place is being Successfully added using AddPlaceAPI" time="2.476">
+<failure type="java.lang.AssertionError" message="2 expectations failed.
+Expected status code &lt;201&gt; but was &lt;404&gt;.
+
+Expected content-type &quot;JSON&quot; doesn't match actual content-type &quot;text/html; charset=UTF-8&quot;.
+">
+<![CDATA[java.lang.AssertionError: 2 expectations failed.
+Expected status code <201> but was <404>.
+
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at stepDefinitions.StepDefinition.user_calls_with_Post_http_request(StepDefinition.java:79)
+	at ✽.user calls "AddPlaceAPI" with Post http request(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework-master/src/test/java/features/placeValidatures.feature:7)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Add Place Payload.....................................................passed
+When user calls "AddPlaceAPI" with Post http request........................failed
+Then the API Call got success with status code "201"........................skipped
+And "status" in response body is "OK".......................................skipped
+And "scope" in response body is "APP".......................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully added using AddPersonAPI - #1.1" time="0.285">
+<failure type="java.lang.AssertionError" message="expected:&lt;404&gt; but was:&lt;201&gt;">
+<![CDATA[java.lang.AssertionError: expected:<404> but was:<201>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:190)
+	at ✽.the "AddPersonAPI" Call got success with status code "201"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework-master/src/test/java/features/placeValidatures.feature:17)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Add Person Payload with "rohan" "srivastava" "4"......................passed
+When user calls "AddPersonAPI" with "Post" http request.....................passed
+Then the "AddPersonAPI" Call got success with status code "201".............failed
+And "status" in response body is "OK".......................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully get using GetPersonAPI - #1.1" time="0.803">
+<failure type="java.lang.AssertionError" message="expected:&lt;404&gt; but was:&lt;200&gt;">
+<![CDATA[java.lang.AssertionError: expected:<404> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:199)
+	at ✽.the "GetSinglePersonAPI" Call got success with status code "200"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework-master/src/test/java/features/placeValidatures.feature:32)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Get Person Payload with "3"...........................................passed
+When user calls "GetSinglePersonAPI" with "GET" http request................passed
+Then the "GetSinglePersonAPI" Call got success with status code "200".......failed
+And "status" in response body is "OK".......................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Validating Place API's" name="Verify if Person is being Successfully deleted using DeletePersonAPI - #1.1" time="0.406">
+<failure type="java.lang.AssertionError" message="2 expectations failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+Expected content-type &quot;JSON&quot; doesn't match actual content-type &quot;text/html; charset=UTF-8&quot;.
+">
+<![CDATA[java.lang.AssertionError: 2 expectations failed.
+Expected status code <200> but was <404>.
+
+Expected content-type "JSON" doesn't match actual content-type "text/html; charset=UTF-8".
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:101)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)
+	at stepDefinitions.StepDefinition.user_calls_with_Delete_http_request_for(StepDefinition.java:145)
+	at ✽.user calls "DeletePersonAPI" with Delete http request for "5"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework-master/src/test/java/features/placeValidatures.feature:44)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Delete Person Payload with "5"........................................passed
+When user calls "DeletePersonAPI" with Delete http request for "5"..........failed
+Then the "DeletePersonAPI" Call got success with status code "200"..........skipped
+And "status" in response body is "OK".......................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
