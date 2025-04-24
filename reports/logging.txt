@@ -1,0 +1,115 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Thu, 24 Apr 2025 17:28:45 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "5326535362da63be07bd783a7006a2e2",
+    "scope": "APP",
+    "reference": "228055a9f783d4696368af7c2a8b01cf228055a9f783d4696368af7c2a8b01cf",
+    "id": "228055a9f783d4696368af7c2a8b01cf"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=5326535362da63be07bd783a7006a2e2&key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	place_id=5326535362da63be07bd783a7006a2e2
+				key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Thu, 24 Apr 2025 17:28:46 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 240
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": "shoe park,shop",
+    "website": "http://google.com",
+    "language": "English"
+}
+Request method:	DELETE
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "5326535362da63be07bd783a7006a2e2"
+}
+HTTP/1.1 200 OK
+Date: Thu, 24 Apr 2025 17:28:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
+}
