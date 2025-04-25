@@ -12,66 +12,36 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class Utils {
 
 	public static RequestSpecification req;
-	
 	public static final Properties prop = new Properties();
 
 	public RequestSpecification requestSpecification() throws IOException {
 
 		
-		if(req==null)
-		{	
+		if(req==null) {
 		PrintStream log = new PrintStream(new FileOutputStream("reports/logging.txt"));
 
 		req = new RequestSpecBuilder().setBaseUri(getGlobalValue("base_url"))
 
 				// req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
-
 				// .addQueryParam("Key", "qaclick123")
-				
-				
-
 				.addFilter(RequestLoggingFilter.logRequestTo(log))
-
 				.addFilter(ResponseLoggingFilter.logResponseTo(log))
-
-				.setContentType(ContentType.JSON).build();
-
+				.setContentType(ContentType.JSON)
+				.build();
 		return req;
 	}
 		return req;
-		
 	}
 
-	
-	
-	public static String getGlobalValue(String key) throws IOException
-	{
-		
-			FileInputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "//src//test//java//resources//global.properties");
-		
-			prop.load(inputStream);
-			
-		  return prop.getProperty(key);
-			
-			
-			
+	public static String getGlobalValue(String key) throws IOException {
+		FileInputStream inputStream = new FileInputStream(System.getProperty("user.dir") + "//src//test//java//resources//global.properties");
+		prop.load(inputStream);
+		return prop.getProperty(key);
 	}
-
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
