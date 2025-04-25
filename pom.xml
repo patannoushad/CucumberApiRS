@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>RahulShettyBDDAPIFramework</groupId>
+    <groupId>org.example</groupId>
     <artifactId>RahulShettyBDDAPIFramework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
@@ -55,34 +55,34 @@
                 </plugin>
                  -->
 
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.8.5</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>RahulShettyBDDAPIFramework</projectName>
-                            <skip>false</skip>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-<!--                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>-->
-                            <jsonFiles>
+<!--            <plugin>-->
+<!--                <groupId>net.masterthought</groupId>-->
+<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+<!--                <version>5.8.5</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>execution</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>generate</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <projectName>RahulShettyBDDAPIFramework</projectName>-->
+<!--                            <skip>false</skip>-->
+<!--                            <outputDirectory>${project.build.directory}</outputDirectory>-->
+<!--&lt;!&ndash;                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>&ndash;&gt;-->
+<!--                            <jsonFiles>-->
 
-                                <param>**/*.json</param>
-                            </jsonFiles>
-<!--                            <parallelTesting>false</parallelTesting>-->
-                            <mergeFeaturesById>false</mergeFeaturesById>
-                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
-                            <checkBuildResult>false</checkBuildResult>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--                                <param>**/*.json</param>-->
+<!--                            </jsonFiles>-->
+<!--&lt;!&ndash;                            <parallelTesting>false</parallelTesting>&ndash;&gt;-->
+<!--                            <mergeFeaturesById>false</mergeFeaturesById>-->
+<!--                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>-->
+<!--                            <checkBuildResult>false</checkBuildResult>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
     <dependencies>
@@ -156,12 +156,11 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.22.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
+            <artifactId>cucumber-testng</artifactId>
             <version>7.22.0</version>
-            <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
         <dependency>
@@ -169,6 +168,14 @@
             <artifactId>cucumber-core</artifactId>
             <version>7.22.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.14.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>

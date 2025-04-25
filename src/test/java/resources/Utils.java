@@ -25,7 +25,7 @@ public class Utils {
 		
 		if(req==null)
 		{	
-		PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
+		PrintStream log = new PrintStream(new FileOutputStream("reports/logging.txt"));
 
 		req = new RequestSpecBuilder().setBaseUri(getGlobalValue("base_url"))
 
