@@ -12,6 +12,7 @@ import javax.annotation.processing.Generated;
 })
 @Generated("jsonschema2pojo")
 public class PlaceId {
+
     @JsonProperty("place_id")
     private String place_id;
 

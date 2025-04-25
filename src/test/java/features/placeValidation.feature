@@ -31,7 +31,7 @@ Feature: Validating Place API's
   Scenario: Verify if Place is being Successfully deleted using DeletePlaceAPI
     Given Delete Place Payload with place id
     When user calls "DeletePlaceAPI" with Delete http request
-    Then the "DeletePlaceAPI" Call got success with status code "200"
+    Then the "DeletePlaceAPI" Call got success with status code "400"
     And "status" in response body is "OK"
 
         

@@ -46,8 +46,8 @@ public class TestDataBuild {
 		p.setLocation(l);
 
 		return p;
-
 	}
+
 	public AddPlace addPlacePayLoad(String name,String language ,String address) {
 
 		AddPlace p = new AddPlace();
@@ -67,32 +67,27 @@ public class TestDataBuild {
 		p.setLocation(l);
 
 		return p;
-
 	}
 
 	public Person addPersonPayLoad(String fname,String lname ,String id) {
 
 		Person person = new Person();
-	
+
 		person.setFirstName(fname);
 		person.setLastName(lname);
-
 		person.setAge(35);
-		
 		person.setId(Integer.parseInt(id));
 		person.setAddress("201 house no");
 		person.setPhonenumbers("9978678");
 
 		return person;
-
 	}
+
 	public PlaceId deletePlacePayLoad(String id) {
 
 		PlaceId placeId= new PlaceId();
 		placeId.setPlaceId(id);
 
 		return placeId;
-
 	}
-
 }

@@ -1,7 +1,7 @@
 package resources;
 
 public enum APIResources {
-	
+
 	//Person
 	GetPersonAPI("/persons"),
 	GetSinglePersonAPI("/persons/{id}"),
@@ -14,23 +14,13 @@ public enum APIResources {
 	GetSinglePlaceAPI("/maps/api/place/get/json"),
 	DeletePlaceAPI("/maps/api/place/delete/json");
 
-
-
-
 	private String resource;
-	
-	APIResources(String resource)
-	{
-		
-	this.resource=resource;
-		
+
+	APIResources(String resource) {
+		this.resource=resource;
 	}
-	
-	public String getResource()
-	{
-		
+
+	public String getResource() {
 		return resource;
 	}
-	
-
 }
