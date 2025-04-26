@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 25, 2025 08:15:08 am</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 26, 2025 09:17:40 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -77,10 +77,10 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@AddPlace</a></li>
 					<li><a href='#'>@GetPerson</a></li>
 					<li><a href='#'>@regression</a></li>
-					<li><a href='#'>@AddPlace</a></li>
+					<li><a href='#'>@Smoke</a></li>
 					<li><a href='#'>@DeletePlace</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -161,13 +161,13 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='83%'>
-                    <span class='strong'>10</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='86%'>
+                    <span class='strong'>13</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8%'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6%'>
                     1</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='8%'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6%'>
                     1</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
@@ -192,7 +192,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Validating Place API's</span>
-						<span class='test-time'>Apr 25, 2025 08:15:09 am</span>
+						<span class='test-time'>Apr 26, 2025 09:17:40 pm</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -205,7 +205,7 @@
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 02.140</span>
+	<span class='duration right label'>00 00 02.019</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify if Place is being Successfully added using AddPlaceAPI</div>
 	</div>
@@ -240,13 +240,65 @@
 					<h6 class="step-name" title="stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And "status" in response body is "OK"</h6>
 
 				</li>
+				<li test-id='8' class='gc * Pass' status='Pass'>
+					<h6 class="step-name" title="AFTER"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepDefinitions.Hooks.afterScenario()</h6>
+
+							<div class="node-step">Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "e838ad2b3ddfa713f51e7a7908961c4a",
+    "scope": "APP",
+    "reference": "cc91773d028b856a049e0a546c498709cc91773d028b856a049e0a546c498709",
+    "id": "cc91773d028b856a049e0a546c498709"
+}
+</div>
+				</li>
 			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='8' status='pass'>
+<div class='scenario node' test-id='9' status='pass'>
 
-	<span class='duration right label'>00 00 01.328</span>
+	<span class='duration right label'>00 00 01.280</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify if Place is being Successfully get using GetSinglePlaceAPI</div>
 	</div>
@@ -259,31 +311,122 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='9' class='node given Pass' status='Pass'>
+		<li test-id='10' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.get_Place_Payload_with_placeId())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Get Place Payload with Place id</div>
 
 
 		</li>
-		<li test-id='10' class='node when Pass' status='Pass'>
+		<li test-id='11' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user calls "GetSinglePlaceAPI" with "GET" http request</div>
 
 
 		</li>
-		<li test-id='11' class='node then Pass' status='Pass'>
+		<li test-id='12' class='node then Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the "GetSinglePlaceAPI" Call got success with status code "200"</div>
 
 
 		</li>
-		<li test-id='12' class='node and Pass' status='Pass'>
+		<li test-id='13' class='node and Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And "status" in response body is "OK"</div>
 
 
 		</li>
+		<li test-id='14' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepDefinitions.Hooks.afterScenario()</div>
+
+
+					<div class="node-step">Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "e838ad2b3ddfa713f51e7a7908961c4a",
+    "scope": "APP",
+    "reference": "cc91773d028b856a049e0a546c498709cc91773d028b856a049e0a546c498709",
+    "id": "cc91773d028b856a049e0a546c498709"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=e838ad2b3ddfa713f51e7a7908961c4a&key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	place_id=e838ad2b3ddfa713f51e7a7908961c4a
+				key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 240
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": "shoe park,shop",
+    "website": "http://google.com",
+    "language": "English"
+}
+</div>
+		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='13' status='fail'>
+<div class='scenario node' test-id='15' status='fail'>
 
-	<span class='duration right label'>00 00 01.962</span>
+	<span class='duration right label'>00 00 01.799</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify if Place is being Successfully deleted using DeletePlaceAPI</div>
 	</div>
@@ -296,17 +439,17 @@
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='14' class='node given Pass' status='Pass'>
+		<li test-id='16' class='node given Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.delete_Place_Payload_with_placeId())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Delete Place Payload with place id</div>
 
 
 		</li>
-		<li test-id='15' class='node when Pass' status='Pass'>
+		<li test-id='17' class='node when Pass' status='Pass'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.user_calls_with_Delete_http_request_for(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user calls "DeletePlaceAPI" with Delete http request</div>
 
 
 		</li>
-		<li test-id='16' class='node then Fail' status='Fail'>
+		<li test-id='18' class='node then Fail' status='Fail'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(java.lang.String,java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then the "DeletePlaceAPI" Call got success with status code "400"</div>
 
 
@@ -316,15 +459,136 @@
 	at org.junit.Assert.assertEquals(Assert.java:128)
 	at org.junit.Assert.assertEquals(Assert.java:472)
 	at org.junit.Assert.assertEquals(Assert.java:456)
-	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:171)
+	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:156)
 	at ✽.the "DeletePlaceAPI" Call got success with status code "400"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework/src/test/java/features/placeValidation.feature:34)
 </textarea>
 		</li>
-		<li test-id='17' class='node and Skip' status='Skip'>
+		<li test-id='19' class='node and Skip' status='Skip'>
 			<div class="step-name" title="(stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And "status" in response body is "OK"</div>
 
 
 					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='20' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>stepDefinitions.Hooks.afterScenario()</div>
+
+
+					<div class="node-step">Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    },
+    "accuracy": 50,
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": [
+        "shoe park",
+        "shop"
+    ],
+    "website": "http://google.com",
+    "language": "English"
+}
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "e838ad2b3ddfa713f51e7a7908961c4a",
+    "scope": "APP",
+    "reference": "cc91773d028b856a049e0a546c498709cc91773d028b856a049e0a546c498709",
+    "id": "cc91773d028b856a049e0a546c498709"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=e838ad2b3ddfa713f51e7a7908961c4a&key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	place_id=e838ad2b3ddfa713f51e7a7908961c4a
+				key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:48 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 240
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "Frontline house",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Tadigadapa",
+    "types": "shoe park,shop",
+    "website": "http://google.com",
+    "language": "English"
+}
+Request method:	DELETE
+Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "place_id": "e838ad2b3ddfa713f51e7a7908961c4a"
+}
+HTTP/1.1 200 OK
+Date: Sat, 26 Apr 2025 15:47:49 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 15
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK"
+}
+</div>
 		</li>
 	</ul>
 </div>
@@ -372,16 +636,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Smoke</span>
+						<span class='category-name'>@AddPlace</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -395,19 +658,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:09 am</td>
+										<td>Apr 26, 2025 09:17:40 pm</td>
 										<td class='linked' test-id='3'>Verify if Place is being Successfully added using AddPlaceAPI</td>
 										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Apr 25, 2025 08:15:11 am</td>
-										<td class='linked' test-id='8'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
-										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-									<tr>
-										<td>Apr 25, 2025 08:15:12 am</td>
-										<td class='linked' test-id='13'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
-										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -438,8 +691,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:11 am</td>
-										<td class='linked' test-id='8'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
+										<td>Apr 26, 2025 09:17:42 pm</td>
+										<td class='linked' test-id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -472,18 +725,18 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:09 am</td>
+										<td>Apr 26, 2025 09:17:40 pm</td>
 										<td class='linked' test-id='3'>Verify if Place is being Successfully added using AddPlaceAPI</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2025 08:15:11 am</td>
-										<td class='linked' test-id='8'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
+										<td>Apr 26, 2025 09:17:42 pm</td>
+										<td class='linked' test-id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2025 08:15:12 am</td>
-										<td class='linked' test-id='13'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
+										<td>Apr 26, 2025 09:17:44 pm</td>
+										<td class='linked' test-id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -493,15 +746,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@AddPlace</span>
+						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -515,9 +769,19 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:09 am</td>
+										<td>Apr 26, 2025 09:17:40 pm</td>
 										<td class='linked' test-id='3'>Verify if Place is being Successfully added using AddPlaceAPI</td>
 										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 26, 2025 09:17:42 pm</td>
+										<td class='linked' test-id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 26, 2025 09:17:44 pm</td>
+										<td class='linked' test-id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -548,8 +812,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:12 am</td>
-										<td class='linked' test-id='13'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
+										<td>Apr 26, 2025 09:17:44 pm</td>
+										<td class='linked' test-id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -601,8 +865,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2025 08:15:14 am</td>
-										<td class='linked' test-id='16'>Then the "DeletePlaceAPI" Call got success with status code "400"</td>
+										<td>Apr 26, 2025 09:17:46 pm</td>
+										<td class='linked' test-id='18'>Then the "DeletePlaceAPI" Call got success with status code "400"</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.AssertionError: expected:<200> but was:<400>
 	at org.junit.Assert.fail(Assert.java:93)
@@ -610,7 +874,7 @@
 	at org.junit.Assert.assertEquals(Assert.java:128)
 	at org.junit.Assert.assertEquals(Assert.java:472)
 	at org.junit.Assert.assertEquals(Assert.java:456)
-	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:171)
+	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:156)
 	at ✽.the "DeletePlaceAPI" Call got success with status code "400"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework/src/test/java/features/placeValidation.feature:34)
 </textarea>
 										</td>
@@ -649,25 +913,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>15</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 25, 2025 08:15:08 am</div>
+					<div class='panel-lead'>Apr 26, 2025 09:17:40 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 25, 2025 08:15:14 am</div>
+			 		<div class='panel-lead'>Apr 26, 2025 09:17:46 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 06.077</div>
+					<div class='panel-lead'>00 00 05.655</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -715,12 +979,12 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Smoke</td>
-							<td>2</td>
+							<td>@AddPlace</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									66.667%
+									100%
 							</td>
 						</tr>
 						<tr>
@@ -742,12 +1006,12 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@AddPlace</td>
+							<td>@Smoke</td>
+							<td>2</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									66.667%
 							</td>
 						</tr>
 						<tr>
@@ -785,8 +1049,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 12,
-				passGrandChild: 10,
+				grandChildCount: 15,
+				passGrandChild: 13,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -798,7 +1062,7 @@
 		
 		<script>
 			var timeline = {
-			        "Validating Place API's":5.442
+			        "Validating Place API's":5.111
 			};
 		</script>
 		
