@@ -5,7 +5,7 @@
     <artifactId>RahulShettyBDDAPIFramework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-<!--        <java.version>1.8</java.version>-->
+        <!--        <java.version>1.8</java.version>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
@@ -55,34 +55,34 @@
                 </plugin>
                  -->
 
-<!--            <plugin>-->
-<!--                <groupId>net.masterthought</groupId>-->
-<!--                <artifactId>maven-cucumber-reporting</artifactId>-->
-<!--                <version>5.8.5</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>execution</id>-->
-<!--                        <phase>verify</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>generate</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <projectName>RahulShettyBDDAPIFramework</projectName>-->
-<!--                            <skip>false</skip>-->
-<!--                            <outputDirectory>${project.build.directory}</outputDirectory>-->
-<!--&lt;!&ndash;                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>&ndash;&gt;-->
-<!--                            <jsonFiles>-->
+            <!--            <plugin>-->
+            <!--                <groupId>net.masterthought</groupId>-->
+            <!--                <artifactId>maven-cucumber-reporting</artifactId>-->
+            <!--                <version>5.8.5</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>execution</id>-->
+            <!--                        <phase>verify</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>generate</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <projectName>RahulShettyBDDAPIFramework</projectName>-->
+            <!--                            <skip>false</skip>-->
+            <!--                            <outputDirectory>${project.build.directory}</outputDirectory>-->
+            <!--&lt;!&ndash;                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>&ndash;&gt;-->
+            <!--                            <jsonFiles>-->
 
-<!--                                <param>**/*.json</param>-->
-<!--                            </jsonFiles>-->
-<!--&lt;!&ndash;                            <parallelTesting>false</parallelTesting>&ndash;&gt;-->
-<!--                            <mergeFeaturesById>false</mergeFeaturesById>-->
-<!--                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>-->
-<!--                            <checkBuildResult>false</checkBuildResult>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--                                <param>**/*.json</param>-->
+            <!--                            </jsonFiles>-->
+            <!--&lt;!&ndash;                            <parallelTesting>false</parallelTesting>&ndash;&gt;-->
+            <!--                            <mergeFeaturesById>false</mergeFeaturesById>-->
+            <!--                            <mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>-->
+            <!--                            <checkBuildResult>false</checkBuildResult>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
     <dependencies>
@@ -139,6 +139,7 @@
             <version>2.13.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <!--        this dependency is used for JSON to Java object conversion-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
