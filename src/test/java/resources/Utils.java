@@ -1,12 +1,9 @@
 package resources;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.Properties;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -19,23 +16,28 @@ public class Utils {
 
 	public static RequestSpecification req;
 	public static final Properties prop = new Properties();
+	public static StringBuilder requestResponseLogs; // Captures request and response logs
+
 
 	public RequestSpecification requestSpecification() throws IOException {
+		if (req == null) {
+			requestResponseLogs = new StringBuilder();
 
-		
-		if(req==null) {
-		PrintStream log = new PrintStream(new FileOutputStream("reports/logging.txt"));
+			PrintStream captor = new PrintStream(new OutputStream() {
+				@Override
+				public void write(int b) throws IOException {
+					requestResponseLogs.append((char) b);
+				}
+			});
 
-		req = new RequestSpecBuilder().setBaseUri(getGlobalValue("base_url"))
-
-				// req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
-				// .addQueryParam("Key", "qaclick123")
-				.addFilter(RequestLoggingFilter.logRequestTo(log))
-				.addFilter(ResponseLoggingFilter.logResponseTo(log))
-				.setContentType(ContentType.JSON)
-				.build();
-		return req;
-	}
+			req = new RequestSpecBuilder()
+					.setBaseUri(getGlobalValue("base_url"))
+					.addFilter(RequestLoggingFilter.logRequestTo(captor))
+					.addFilter(ResponseLoggingFilter.logResponseTo(captor))
+					.setContentType(ContentType.JSON)
+					.build();
+			return req;
+		}
 		return req;
 	}
 

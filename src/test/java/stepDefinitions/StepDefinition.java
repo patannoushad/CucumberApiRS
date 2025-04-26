@@ -3,42 +3,26 @@ package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import pojo.AddPlace;
-import pojo.Location;
 import resources.TestDataBuild;
 import resources.Utils;
-
-import static org.hamcrest.Matchers.*;
-
 import static org.junit.Assert.*;
-import static org.testng.Assert.assertTrue;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpStatus;
-
 import resources.APIResources;
 import resources.EndPoints;
-
 import static io.restassured.RestAssured.*;
 
 public class StepDefinition extends Utils {
 
-    RequestSpecification res;
-    ResponseSpecification resspec;
-    Response response;
+    public static RequestSpecification res;
+    public static ResponseSpecification resspec;
+    public static Response response;
     static String place_id;
     TestDataBuild data = new TestDataBuild();
 
