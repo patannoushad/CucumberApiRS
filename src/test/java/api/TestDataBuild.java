@@ -1,12 +1,8 @@
-package resources;
+package api;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
 import pojo.AddPlace;
 import pojo.Location;
 import pojo.Person;

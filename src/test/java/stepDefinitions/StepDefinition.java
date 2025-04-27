@@ -9,13 +9,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import resources.TestDataBuild;
-import resources.Utils;
+import api.TestDataBuild;
+import api.Utils;
 import static org.junit.Assert.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import resources.APIResources;
-import resources.EndPoints;
+import api.APIResources;
+import api.EndPoints;
 import static io.restassured.RestAssured.*;
 
 public class StepDefinition extends Utils {
