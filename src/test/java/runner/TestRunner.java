@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        features = "src/test/java/features",
+        features = "src/test/resources/features",
         glue = {"stepDefinitions"},
-        tags = "@Smoke",
+        tags = "@regression",
         monochrome = true,
         dryRun = false
 )

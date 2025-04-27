@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import io.cucumber.java.After;
-import static resources.Utils.requestResponseLogs;
+import static api.Utils.requestResponseLogs;
 
 public class Hooks {
 
