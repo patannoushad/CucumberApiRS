@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">API Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Apr 27, 2025 06:11:31 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 1, 2025 11:31:18 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('category-view')">
@@ -76,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -84,31 +79,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@DeletePlace</a><a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@GetPerson</a><a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@AddPlace</a>
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@CreatePlaylist</a><a class="dropdown-item" href="#">@regression</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Validating Place API's</p>
+            <p class="name">Validating Spotify PlayList APIs</p>
             <p class="text-sm">
-              <span>6:11:32 pm</span> / <span>00:00:05:381</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>11:31:18 pm</span> / <span>00:00:02:769</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Validating Place API's</h5>
-<span class='badge badge-success'>04.27.2025 6:11:32 pm</span>
-<span class='badge badge-danger'>04.27.2025 6:11:37 pm</span>
-<span class='badge badge-default'>00:00:05:381</span>
+<h5 class="test-status text-pass">Validating Spotify PlayList APIs</h5>
+<span class='badge badge-success'>05.01.2025 11:31:18 pm</span>
+<span class='badge badge-danger'>05.01.2025 11:31:21 pm</span>
+<span class='badge badge-default'>00:00:02:769</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -133,73 +128,105 @@
               </div>
               <div class="card-body mt-3 collapse">
                   <div class="step pass-bg">
-                    <span>Given Add Place Payload with "Frontline house" "English" "Tadigadapa"</span>
+                    <span>Given Add Playlist Payload with "Abcded" "EngliNew playlist description" "false"</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>When user calls "AddPlaceAPI" with "Post" http request</span>
+                    <span>When user calls "AddPlaylistAPI" with "Post" http request on Playlist API</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Then the "AddPlaceAPI" Call got success with status code "200"</span>
+                    <span>Then the "AddPlaylistAPI" Call got success with status code "201" on Playlist API</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>And "status" in response body is "OK"</span>
+                    <span>And "type" in response body is "playlist" on Playlist API</span>
       <div>
       </div>
                   </div>
                   <div class="step pass-bg">
                     <span>stepDefinitions.Hooks.afterScenario()</span>
       <div>Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
+Request URI:	https://api.spotify.com/v1/users/31zghzhjvfg3ao3x6px4wogw6sc4/playlists
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=*/*
+Headers:		Authorization=Bearer BQAz3UmAzbAbuC3GGHcyD9GQmuLMKVsxbmGjbgKHYaauaUVBu2-v9YSKFtscPte1Mv_ZuEdeSPu9d3mJEHKW7neLauZw--0o2vsH1bJjxU1b5Z3beEz0k19po-pLgnADR7cJVc8U05PMcmP5ZKUGSP5lo5NTGTQvf3B2fRzFtb6MV4yqhQGb94UlkKzvyXPs2ttNHuQi0cfEHJZP5PNu6KRr_73T_xcw7tYCyQ3h6QenMr3J00z2iJyeRJAk8CI5aKcCNWfdq9Cg9ek6MbsBPXYeglUPUMkxSDmYFYqFpjPHrgMeOLRa
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "Tadigadapa",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "English"
+    "name": "Stage And Screen Vibes - Aut",
+    "description": "Description: This playlist features the best of hip hop music for a moments. Vel amet rem vero sed reprehenderit earum est in nihil quis doloremque veniam esse. Perfect for magnam and relaxation.",
+    "_public": "false"
 }
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:40 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
+HTTP/1.1 201 Created
+content-type: application/json; charset=utf-8
+cache-control: private, max-age=0
+x-robots-tag: noindex, nofollow
+access-control-allow-origin: *
+access-control-allow-headers: Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context, client-token, content-access-token
+access-control-allow-methods: GET, POST, OPTIONS, PUT, DELETE, PATCH
+access-control-allow-credentials: true
+access-control-max-age: 604800
+content-encoding: gzip
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+date: Thu, 01 May 2025 18:01:21 GMT
+server: envoy
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
 
 {
-    "status": "OK",
-    "place_id": "68a39c52bb35176ba454518879314e6a",
-    "scope": "APP",
-    "reference": "e4e1fad67b8229600e0dc437db25e599e4e1fad67b8229600e0dc437db25e599",
-    "id": "e4e1fad67b8229600e0dc437db25e599"
+    "collaborative": false,
+    "description": "Description: This playlist features the best of hip hop music for a moments. Vel amet rem vero sed reprehenderit earum est in nihil quis doloremque veniam esse. Perfect for magnam and relaxation.",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0mFU5BJ2u6XshxxHOb1Lc2"
+    },
+    "followers": {
+        "href": null,
+        "total": 0
+    },
+    "href": "https://api.spotify.com/v1/playlists/0mFU5BJ2u6XshxxHOb1Lc2",
+    "id": "0mFU5BJ2u6XshxxHOb1Lc2",
+    "images": [
+        
+    ],
+    "primary_color": null,
+    "name": "Stage And Screen Vibes - Aut",
+    "type": "playlist",
+    "uri": "spotify:playlist:0mFU5BJ2u6XshxxHOb1Lc2",
+    "owner": {
+        "href": "https://api.spotify.com/v1/users/31zghzhjvfg3ao3x6px4wogw6sc4",
+        "id": "31zghzhjvfg3ao3x6px4wogw6sc4",
+        "type": "user",
+        "uri": "spotify:user:31zghzhjvfg3ao3x6px4wogw6sc4",
+        "display_name": null,
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31zghzhjvfg3ao3x6px4wogw6sc4"
+        }
+    },
+    "public": true,
+    "snapshot_id": "AAABgZltCj9hYHEcpIjlkU61hzcrOhi+",
+    "tracks": {
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "href": "https://api.spotify.com/v1/playlists/0mFU5BJ2u6XshxxHOb1Lc2/tracks",
+        "total": 0,
+        "items": [
+            
+        ]
+    }
 }
 
       </div>
@@ -208,292 +235,6 @@ Content-Type: application/json;charset=UTF-8
                   </div>
               </div>
             </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify if Place is being Successfully get using GetSinglePlaceAPI</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.get_Place_Payload_with_placeId()">
-                <span>Given Get Place Payload with Place id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.user_calls_with_http_request(java.lang.String,java.lang.String)">
-                <span>When user calls "GetSinglePlaceAPI" with "GET" http request</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(java.lang.String,java.lang.String)">
-                <span>Then the "GetSinglePlaceAPI" Call got success with status code "200"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)">
-                <span>And "status" in response body is "OK"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>stepDefinitions.Hooks.afterScenario()</span>
-      <div>Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "Tadigadapa",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "English"
-}
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:40 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "68a39c52bb35176ba454518879314e6a",
-    "scope": "APP",
-    "reference": "e4e1fad67b8229600e0dc437db25e599e4e1fad67b8229600e0dc437db25e599",
-    "id": "e4e1fad67b8229600e0dc437db25e599"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=68a39c52bb35176ba454518879314e6a&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	place_id=68a39c52bb35176ba454518879314e6a
-				key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:40 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 240
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "Tadigadapa",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "English"
-}
-
-      </div>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="15"><span class="badge log fail-bg mr-2">Fail</span>Verify if Place is being Successfully deleted using DeletePlaceAPI</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.delete_Place_Payload_with_placeId()">
-                <span>Given Delete Place Payload with place id</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.StepDefinition.user_calls_with_Delete_http_request_for(java.lang.String)">
-                <span>When user calls "DeletePlaceAPI" with Delete http request</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(java.lang.String,java.lang.String)">
-                <span>Then the "DeletePlaceAPI" Call got success with status code "400"</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: expected:<200> but was:<400>
-	at org.junit.Assert.fail(Assert.java:93)
-	at org.junit.Assert.failNotEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:128)
-	at org.junit.Assert.assertEquals(Assert.java:472)
-	at org.junit.Assert.assertEquals(Assert.java:456)
-	at stepDefinitions.StepDefinition.the_Call_got_success_with_status_code(StepDefinition.java:155)
-	at ✽.the "DeletePlaceAPI" Call got success with status code "400"(file:///D:/eatOS/Appium/RahulShettyBDDAPIFramework/src/test/resources/features/placeValidation.feature:34)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step skip-bg" title="stepDefinitions.StepDefinition.in_response_body_is(java.lang.String,java.lang.String)">
-                <span>And "status" in response body is "OK"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>stepDefinitions.Hooks.afterScenario()</span>
-      <div>Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json
-Proxy:			<none>
-Request params:	<none>
-Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "Tadigadapa",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "English"
-}
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:40 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "68a39c52bb35176ba454518879314e6a",
-    "scope": "APP",
-    "reference": "e4e1fad67b8229600e0dc437db25e599e4e1fad67b8229600e0dc437db25e599",
-    "id": "e4e1fad67b8229600e0dc437db25e599"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?place_id=68a39c52bb35176ba454518879314e6a&key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	place_id=68a39c52bb35176ba454518879314e6a
-				key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:40 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 240
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "Frontline house",
-    "phone_number": "(+91) 983 893 3937",
-    "address": "Tadigadapa",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "English"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "68a39c52bb35176ba454518879314e6a"
-}
-HTTP/1.1 200 OK
-Date: Sun, 27 Apr 2025 12:41:41 GMT
-Server: Apache/2.4.52 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
-}
-
-      </div>
-      <div>
-      </div>
-              </div>
-          </div>
         </div>
   </div>
 </div>
@@ -508,171 +249,25 @@ Content-Type: application/json;charset=UTF-8
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:11:37 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='18'>Then the "DeletePlaceAPI" Call got success with status code "400"</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully deleted using DeletePlaceAPI.Then the "DeletePlaceAPI" Call got success with status code "400"</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-wrapper row view category-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@DeletePlace</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@DeletePlace</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:11:35 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully deleted using DeletePlaceAPI</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>2</span>
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
 </span>
 <p class="name">@Smoke</p>
-<p class="duration text-sm">3 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@Smoke</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:32 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Verify if Place is being Successfully added using AddPlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully added using AddPlaceAPI</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:34 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully get using GetSinglePlaceAPI</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:11:35 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully deleted using DeletePlaceAPI</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@GetPerson</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@GetPerson</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -686,11 +281,11 @@ Content-Type: application/json;charset=UTF-8
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:34 pm</td>
+<td>23:31:18 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</a>
+<a href="#" class="linked" test-id='1' id='3'>Verify if Place is being Successfully added using AddPlaceAPI</a>
 <div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully get using GetSinglePlaceAPI</span>
+<span class="badge badge-default">Validating Spotify PlayList APIs.Verify if Place is being Successfully added using AddPlaceAPI</span>
 </div>
 </td>
 </tr>
@@ -701,72 +296,50 @@ Content-Type: application/json;charset=UTF-8
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>2</span>
-<span class='badge log badge-danger'>1</span>
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@CreatePlaylist</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CreatePlaylist</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>23:31:18 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify if Place is being Successfully added using AddPlaceAPI</a>
+<div class="">
+<span class="badge badge-default">Validating Spotify PlayList APIs.Verify if Place is being Successfully added using AddPlaceAPI</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
 </span>
 <p class="name">@regression</p>
-<p class="duration text-sm">3 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@regression</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:32 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='3'>Verify if Place is being Successfully added using AddPlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully added using AddPlaceAPI</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:34 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='9'>Verify if Place is being Successfully get using GetSinglePlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully get using GetSinglePlaceAPI</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:11:35 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='15'>Verify if Place is being Successfully deleted using DeletePlaceAPI</a>
-<div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully deleted using DeletePlaceAPI</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@AddPlace</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@AddPlace</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -780,11 +353,11 @@ Content-Type: application/json;charset=UTF-8
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>18:11:32 pm</td>
+<td>23:31:18 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='3'>Verify if Place is being Successfully added using AddPlaceAPI</a>
 <div class="">
-<span class="badge badge-default">Validating Place API's.Verify if Place is being Successfully added using AddPlaceAPI</span>
+<span class="badge badge-default">Validating Spotify PlayList APIs.Verify if Place is being Successfully added using AddPlaceAPI</span>
 </div>
 </td>
 </tr>
@@ -805,25 +378,25 @@ Content-Type: application/json;charset=UTF-8
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Apr 27, 2025 06:11:31 pm</h3>
+<h3>May 1, 2025 11:31:18 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Apr 27, 2025 06:11:37 pm</h3>
+<h3>May 1, 2025 11:31:21 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -839,12 +412,12 @@ Content-Type: application/json;charset=UTF-8
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='0%'>
-<b>0</b> features passed
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='100%'><b>1</b> features failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -862,9 +435,9 @@ Content-Type: application/json;charset=UTF-8
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='66%'><b>2</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='33%'><b>1</b> scenarios failed,
+<small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -882,10 +455,10 @@ Content-Type: application/json;charset=UTF-8
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='86%'><b>13</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>5</b> steps passed</small></div>
 <div>
-<small data-tooltip='6%'><b>1</b> steps failed,
-<b>1</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -901,7 +474,7 @@ Content-Type: application/json;charset=UTF-8
 </div></div>
 <script>
 var timeline = {
-"Validating Place API's":5.381
+"Validating Spotify PlayList APIs":2.769
 };
 </script>
 <div class="row">
@@ -911,23 +484,15 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@DeletePlace</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
 <td>@Smoke</td>
-<td>2</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>66.667%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 <tr>
-<td>@GetPerson</td>
+<td>@CreatePlaylist</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -936,14 +501,6 @@ var timeline = {
 </tr>
 <tr>
 <td>@regression</td>
-<td>2</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>66.667%</td>
-</tr>
-<tr>
-<td>@AddPlace</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -989,21 +546,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 0,
-failParent: 1,
+passParent: 1,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 2,
-failChild: 1,
+passChild: 1,
+failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 13,
-failGrandChild: 1,
+passGrandChild: 5,
+failGrandChild: 0,
 warningGrandChild: 0,
-skipGrandChild: 1,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };
