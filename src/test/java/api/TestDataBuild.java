@@ -3,10 +3,7 @@ package api;
 import java.util.ArrayList;
 import java.util.List;
 
-import pojo.AddPlace;
-import pojo.Location;
-import pojo.Person;
-import pojo.PlaceId;
+import pojo.*;
 
 public class TestDataBuild {
 
@@ -85,5 +82,15 @@ public class TestDataBuild {
 		placeId.setPlaceId(id);
 
 		return placeId;
+	}
+
+	public Playlist addPlaylistPayLoad(String name,String language ,String address) {
+
+		Playlist p = new Playlist();
+		p.setName(name);
+		p.setDescription(language);
+		p.set_public(address);
+
+		return p;
 	}
 }
