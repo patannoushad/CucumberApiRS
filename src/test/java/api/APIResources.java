@@ -1,5 +1,7 @@
 package api;
 
+import stepDefinitions.PlayListStepDef;
+
 public enum APIResources {
 
 	//Person
@@ -16,6 +18,7 @@ public enum APIResources {
 
 	//Playlist
 	AddPlaylistAPI("/users/31zghzhjvfg3ao3x6px4wogw6sc4/playlists"),
+	PlaylistIdAPI("/playlists/{playlistId}"),
 
 	//Token
 	ApiToken("/api/token");
@@ -29,5 +32,12 @@ public enum APIResources {
 
 	public String getResource() {
 		return resource;
+	}
+	public String getResource(String... params) {
+		String tempResource = resource;
+		for (String param : params) {
+			tempResource = tempResource.replaceFirst("\\{[^/]+\\}", param);
+		}
+		return tempResource;
 	}
 }

@@ -26,6 +26,7 @@ public class PlayListStepDef extends Utils {
     public static RequestSpecification res;
     public static ResponseSpecification resspec;
     public static Response response;
+    public static String playlist_id;
     TestDataBuild data = new TestDataBuild();
 
 
@@ -51,10 +52,14 @@ public class PlayListStepDef extends Utils {
         if (method.equalsIgnoreCase("POST")){
             response = res.when().post(resourceAPI.getResource());
             JsonPath jsonPath = new JsonPath(response.asString());
-//            place_id=jsonPath.getString("place_id");
+            playlist_id=jsonPath.getString("id");
+            System.out.println("  id  =================   "+playlist_id);
         }
-        else if (method.equalsIgnoreCase("GET"))
-            response = res.when().get(resourceAPI.getResource());
+        else if (method.equalsIgnoreCase("GET")){
+            response = res.when().get(resourceAPI.getResource(playlist_id));
+        }else if (method.equalsIgnoreCase("PUT")){
+            response=res.when().put(resourceAPI.getResource(playlist_id));
+        }
     }
 
     @Then("the {string} Call got success with status code {string} on Playlist API")
@@ -64,21 +69,21 @@ public class PlayListStepDef extends Utils {
         System.out.println(resourceAPI.getResource());
 
         if (resource.equalsIgnoreCase("AddPlaylistAPI")) {
-            int statusco = Integer.parseInt(statuscode);
+            int statusCode = Integer.parseInt(statuscode);
             System.out.println("status code is:" + response.getStatusCode());
-            assertEquals(response.getStatusCode(), statusco);
-        } else if (resource.equalsIgnoreCase("GetSinglePersonAPI")) {
-            int statusco = Integer.parseInt(statuscode);
+            assertEquals(response.getStatusCode(), statusCode);
+        } else if (resource.equalsIgnoreCase("PlaylistIdAPI")) {
+            int statusCode = Integer.parseInt(statuscode);
             System.out.println("status code is:" + response.getStatusCode());
-            assertEquals(response.getStatusCode(), statusco);
+            assertEquals(response.getStatusCode(), statusCode);
         } else if (resource.equalsIgnoreCase("DeletePlaceAPI")) {
-            int statusco = Integer.parseInt(statuscode);
+            int statusCode = Integer.parseInt(statuscode);
             System.out.println("status code is:" + response.getStatusCode());
-            assertEquals(response.getStatusCode(), statusco);
+            assertEquals(response.getStatusCode(), statusCode);
         }
 
-        String responsestring = response.asString();
-        System.out.println("response body is :-" + responsestring);
+        String responseString = response.asString();
+        System.out.println("response body is :-" + responseString);
 
         /*
          * Response response =res.when().post("/maps/api/place/add/json")
@@ -100,5 +105,19 @@ public class PlayListStepDef extends Utils {
         System.out.println("Type : "+typeStr);
         System.out.println("id  : "+js.getString("id"));
         org.testng.Assert.assertEquals(js.getString(key),value);
+    }
+
+    @And("Get Playlist Payload with Place id")
+    public void getPlaylistPayloadWithPlayId(){
+        res = given()
+                .spec(requestSpecification());
+    }
+
+    @Given("Update Playlist Payload with {string} {string} {string}")
+    public void update_Playlist_Payload_with(String name, String language, String address) {
+
+        res = given()
+                .spec(requestSpecification())
+                .body(data.addPlaylistPayLoad(name,language, address));
     }
 }
